@@ -1,0 +1,127 @@
+.login-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Movie poster background (same as Home / NavBar) */
+.login-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--netflix-black);
+}
+
+.login-bg-posters {
+  position: absolute;
+  inset: -10%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2px;
+  transform: scale(1.1);
+}
+
+.login-bg-poster {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.85;
+}
+
+.login-bg-poster:nth-child(odd) {
+  transform: rotate(-1.5deg);
+}
+
+.login-bg-poster:nth-child(even) {
+  transform: rotate(1deg);
+}
+
+.login-bg-poster:nth-child(3n) {
+  transform: rotate(0.8deg);
+}
+
+.login-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.85) 40%,
+    rgba(0, 0, 0, 0.92) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.login-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 420px;
+  padding: 3rem 2.5rem;
+  background-color: var(--netflix-dark);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--netflix-gray-dark);
+}
+
+.login-card h1 {
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--netflix-white);
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  height: 48px;
+  padding: 0 1rem;
+  border: 1px solid var(--netflix-gray-dark);
+  border-radius: 4px;
+  background-color: var(--netflix-black);
+  color: var(--netflix-white);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.login-form input::placeholder {
+  color: var(--netflix-gray);
+}
+
+.login-form input:focus {
+  border-color: var(--netflix-gray-light);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.login-form input[type="submit"] {
+  height: 48px;
+  margin-top: 0.5rem;
+  padding: 0 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--netflix-red);
+  color: var(--netflix-white);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: var(--netflix-red-hover);
+}

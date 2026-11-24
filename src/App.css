@@ -1,0 +1,10 @@
+/* App layout */
+.app-layout {
+  min-height: 100vh;
+  background-color: var(--netflix-black);
+}
+
+.main-content {
+  padding-top: 70px;
+  min-height: calc(100vh - 70px);
+}

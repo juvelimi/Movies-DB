@@ -1,0 +1,129 @@
+/* Navbar - distinct bar with solid background */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  background-color: var(--netflix-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  transition: box-shadow 0.2s ease;
+}
+
+.navbar-logo {
+  font-family: "Bebas Neue", var(--font-sans);
+  font-size: 2.15rem;
+  font-weight: 400;
+  color: var(--netflix-white);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.navbar-logo span {
+  color: var(--netflix-red);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--netflix-gray-light);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: var(--netflix-white);
+  background-color: rgba(229, 9, 20, 0.15);
+}
+
+.navbar-link--active {
+  color: var(--netflix-red);
+  background-color: rgba(229, 9, 20, 0.12);
+}
+
+.navbar-link--active:hover {
+  color: var(--netflix-red);
+  background-color: rgba(229, 9, 20, 0.2);
+}
+
+.navbar-link-login {
+  color: var(--netflix-white);
+  background: linear-gradient(135deg, var(--netflix-red) 0%, #c40812 100%);
+  padding: 0.5rem 1.25rem;
+}
+
+.navbar-link-login:hover {
+  filter: brightness(1.12);
+}
+
+.navbar-user-dropdown {
+  position: relative;
+}
+
+.navbar-user-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--netflix-gray-light);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.navbar-user-btn:hover {
+  color: var(--netflix-white);
+  background-color: rgba(229, 9, 20, 0.15);
+}
+
+.navbar-user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.25rem;
+  min-width: 140px;
+  padding: 0.5rem 0;
+  background-color: var(--netflix-dark);
+  border: 1px solid var(--netflix-gray-dark);
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.navbar-user-menu-item {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: none;
+  background: transparent;
+  color: var(--netflix-gray-light);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.navbar-user-menu-item:hover {
+  color: var(--netflix-white);
+  background-color: rgba(229, 9, 20, 0.15);
+}
